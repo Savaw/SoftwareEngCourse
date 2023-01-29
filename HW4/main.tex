@@ -1,0 +1,65 @@
+% !TEX encoding = UTF-8 Unicode
+% !TeX program = xelatex
+% !TEX TS-program = XeLaTeX
+
+
+\documentclass[12pt,a4paper]{article}
+
+\usepackage{commons/course}
+
+
+\lstset{
+numbers=left, 
+numberstyle=\small, 
+numbersep=8pt, 
+frame = single, 
+language=Python,
+framexleftmargin=15pt
+}
+
+
+
+\pagestyle{plain}
+
+
+
+
+%
+%\let\ds\displaystyle
+%\usepackage{arabtex}
+%\usepackage[utf8]{inputenc}
+%\usepackage[LFE,LAE]{fontenc}
+%\usepackage[english,farsi]{babel}
+%
+
+
+\begin{document}
+
+% -------------------- Front Pages --------------------
+\patchcmd{\chapter}{\thispagestyle{plain}}{\thispagestyle{fancy}}{}{}
+\input{commons/info.tex}
+\input{commons/template/title.tex}
+
+
+
+\pagestyle{fancy}
+\lhead{\ThesisTitle}
+\chead{\ThesisType}
+\rhead{\ThesisGroup}
+
+%\سربرگ{تمرین اول}{}{آبان ۱۴۰۱}
+
+
+
+\input{Q1.tex}
+\newpage
+\input{Q2.tex}
+\newpage
+\input{Q3.tex}
+\newpage
+\input{Q4.tex}
+\newpage
+
+
+\end{document}
+
